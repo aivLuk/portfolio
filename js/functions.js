@@ -1,38 +1,38 @@
 "use strict";
 
 // header start //
-    window.addEventListener('scroll', () =>{
-        const circle = document.getElementsByClassName("circle");
-        const logo = document.getElementById("elvish");
-        const link = document.getElementsByClassName("link");
-        const fixed = document.getElementById('myHeader');
-        if (window.scrollY > 0){
-            for (let i = 0; i<link.length; i++){
-                link[i].style.color = ('black')
-                
-            }
-            fixed.classList.add('fixed');
-            for (let i = 0; i<circle.length; i++){
-                circle[i].style.background = ('black');
-                console.log(circle[i])
-            }
-            fixed.style.boxShadow = ('0px 1px 10px #e6e6e6')
-            logo.style.color = ('black')
-            
-        }else{
-            fixed.classList.remove('fixed');
-            for (let i = 0; i<circle.length; i++){
-                circle[i].style.background = ('white');
-                
-            }
-            for (let i = 0; i<link.length; i++){
-                link[i].style.color = ('white')
-                
-            }
-            fixed.style.boxShadow = ('none')
-            logo.style.color = ('white')
+window.addEventListener('scroll', () => {
+    const circle = document.getElementsByClassName("circle");
+    const logo = document.getElementById("elvish");
+    const link = document.getElementsByClassName("link");
+    const fixed = document.getElementById('myHeader');
+    if (window.scrollY > 0) {
+        for (let i = 0; i < link.length; i++) {
+            link[i].style.color = ('black')
+
         }
-    })
+        fixed.classList.add('fixed');
+        for (let i = 0; i < circle.length; i++) {
+            circle[i].style.background = ('black');
+            console.log(circle[i])
+        }
+        fixed.style.boxShadow = ('0px 1px 10px #e6e6e6')
+        logo.style.color = ('black')
+
+    } else {
+        fixed.classList.remove('fixed');
+        for (let i = 0; i < circle.length; i++) {
+            circle[i].style.background = ('white');
+
+        }
+        for (let i = 0; i < link.length; i++) {
+            link[i].style.color = ('white')
+
+        }
+        fixed.style.boxShadow = ('none')
+        logo.style.color = ('white')
+    }
+})
 // header end //
 
 // hero start //
@@ -322,6 +322,41 @@ function renderPartners(data) {
 // partners end //
 
 // blog start //
+var modal = document.getElementById("videoStory");
+var img = document.getElementById("videoLink");
+
+
+img.onclick = function () {
+    modal.style.display = "block";
+
+}
+var span = document.getElementsByClassName("close")[0];
+
+
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("slides");
+    if (n > x.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = x.length };
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block";
+
+}
 // blog end //
 
 //back to top//
