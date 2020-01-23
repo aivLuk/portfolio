@@ -1,0 +1,28 @@
+@import './reset.css';
+@import './variables.css';
+@import './education.css';
+
+@import './font-awesome.css';
+@import './hire-me.css';
+
+@import './font-awesome.min.css';
+
+
+@import './layout.css';
+@import './buttons.css';
+@import './blocks.css';
+@import './clients.css';
+@import './gallery.css';
+@import './header.css';
+@import './job-history.css';
+@import './progress-bars.css';
+@import './testimonials.css';
+@import './services.css';
+@import './footer.css';
+@import './partners.css';
+@import './hero.css';
+@import './particles.css';
+@import './message-form.css';
+@import './subscribe.css';
+@import './backToTop.css';
+@import './custom.css';
