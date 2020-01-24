@@ -68,6 +68,7 @@ h3 {
 .elvish {
   float: left;
   font-size: 36px;
+  margin-top: -4px;
   text-decoration: none;
   color: white;
   -webkit-transition: 0.25s;
@@ -75,10 +76,12 @@ h3 {
 }
 
 .pad {
+  background-color: rgba(0, 0, 0, 0.5)
   padding: 0;
   -webkit-transition: 0.25s;
   transition: 0.25s;
   position: fixed;
+  z-index: 10;
 }
 
 .fixed {
@@ -132,4 +135,6 @@ h3 {
 
 .nav:hover > .circle {
   opacity: 1;
-}
+} 
+
+

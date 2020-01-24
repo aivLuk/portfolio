@@ -1,11 +1,13 @@
 "use strict";
 
 // header start //
+
+const circle = document.getElementsByClassName("circle");
+const logo = document.getElementById("elvish");
+const link = document.getElementsByClassName("link");
+const fixed = document.getElementById('myHeader');
+
 window.addEventListener('scroll', () => {
-    const circle = document.getElementsByClassName("circle");
-    const logo = document.getElementById("elvish");
-    const link = document.getElementsByClassName("link");
-    const fixed = document.getElementById('myHeader');
     if (window.scrollY > 0) {
         for (let i = 0; i < link.length; i++) {
             link[i].style.color = ('black')
