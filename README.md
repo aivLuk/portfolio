@@ -8,9 +8,9 @@
 
 This project is for educational porpuses only. Pull request are welcome, but priority for my real-life students! Thank you for your cooperation!
 
-Site published at https://front-end-by-rimantas.github.io/12-grupe-portfolio-elvish/index.html
+Site published at https://aivLuk.github.io/12-grupe-portfolio-elvish/index.html
 
 Design: [elvish template](http://themesboss.com/elvish/index_6.html)
 
 ### Authors
-[Aivaras](https://github.com/belauzas), [Edvinas](https://github.com/belauzas), [Povilas](https://github.com/PovilasGin)
+[Aivaras](https://github.com/aivLuk), [Edvinas](https://github.com/belauzas), [Povilas](https://github.com/PovilasGin)

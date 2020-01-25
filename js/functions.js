@@ -6,9 +6,11 @@ const circle = document.getElementsByClassName("circle");
 const logo = document.getElementById("elvish");
 const link = document.getElementsByClassName("link");
 const fixed = document.getElementById('myHeader');
+const hamburger = document.querySelector('.toggle-button');
+const nav = document.querySelectorAll('.menu .nav');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 0) {
+    if (window.scrollY > 0 && window.innerWidth > 1000) {
         for (let i = 0; i < link.length; i++) {
             link[i].style.color = ('black')
 
@@ -34,11 +36,20 @@ window.addEventListener('scroll', () => {
         fixed.style.boxShadow = ('none')
         logo.style.color = ('white')
     }
+    if (window.scrollY > 550) {
+        hamburger.style.color = 'lightgrey'
+    } else {
+        hamburger.style.color = 'white'
+    }
+})
+
+hamburger.addEventListener('click', () => {
+    for (let i = 0; i < nav.length; i++) {
+        nav[i].classList.toggle('active')
+    }
+    fixed.classList.toggle('act')
 })
 // header end //
-
-// hero start //
-// hero end //
 
 // progress bar start //
 function renderSkills(data) {
@@ -69,8 +80,6 @@ function renderSkills(data) {
         console.log(HTML);
 
         document.querySelector('.progress-bar .col-12').innerHTML = HTML;
-
-
     }
     return;
 }
@@ -93,8 +102,6 @@ function renderServices(data) {
                         <p>${service.par}</p>
                     </div>
                 </div>`
-
-
 
         document.querySelector('#serv').innerHTML = HTML;
     }
@@ -120,7 +127,6 @@ function renderAchievements(data) {
                     <h4 class="counterup">${achievements.amount}</h4>
                     <p>${achievements.title}</p>                   
                     </div>`
-
 
         document.querySelector('#achieve').innerHTML = HTML;
     }
@@ -252,7 +258,6 @@ function renderTestimonials(data) {
                 <p>${testimonials.review}</p>
                 </div>`
 
-
         document.querySelector(".testimonial").innerHTML = HTML;
     }
     const bar1 = document.querySelector(".bar1");
@@ -334,14 +339,12 @@ img.onclick = function () {
 }
 var span = document.getElementsByClassName("close")[0];
 
-
 span.onclick = function () {
     modal.style.display = "none";
 }
 
 var slideIndex = 1;
 showDivs(slideIndex);
-
 
 function plusDivs(n) {
     showDivs(slideIndex += n);
